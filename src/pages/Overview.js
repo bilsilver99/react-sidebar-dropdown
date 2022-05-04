@@ -1,11 +1,24 @@
-import React from 'react';
+import React from "react";
 
-const Overview = () => {
+export const Overview = () => {
   return (
-    <div className='home'>
+    <div className="home">
       <h1>Overview</h1>
     </div>
   );
 };
 
-export default Overview;
+export const Scheduling = () => {
+  return (
+    <div className="home">
+      <h1>Schedule</h1>
+    </div>
+  );
+};
+export const Users = () => {
+  return (
+    <div className="home">
+      <h1>Users</h1>
+    </div>
+  );
+};
