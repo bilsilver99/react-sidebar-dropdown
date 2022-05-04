@@ -16,8 +16,8 @@ const HeaderBar = styled.header`
 const Header = () => {
   return (
     <HeaderBar>
-      <img src={logo} alt="Iron Reservations" height="60" />
-      &nbsp; &nbsp;Iron Reservation Management
+      <img src={logo} alt="Iron Reservations " height="60" />
+      &nbsp; &nbsp;Iron Reservation Management V2.09
     </HeaderBar>
   );
 };
