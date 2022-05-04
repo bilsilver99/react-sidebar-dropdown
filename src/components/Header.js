@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <HeaderBar>
       <img src={logo} alt="Iron Reservations " height="60" />
-      &nbsp; &nbsp;Iron Reservation Management V2.10
+      &nbsp; &nbsp;Iron Reservation Management V2.1a
     </HeaderBar>
   );
 };
