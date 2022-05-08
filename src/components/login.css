@@ -3,7 +3,16 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 70vh;
+    height: 100vh;
+    color: black;
+    background-image: url('../images/calendar.jpg');
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 100vh; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    
+
   }
   .main_box--main{
     width: 600px;
@@ -11,11 +20,13 @@
     position: relative;
     border-radius: 7.5px;
     box-shadow: 0px 0px 25px rgba(0,0,0,.35);
+    background-color:#DFE4E8;
   }
   .main_box--main--name{
     margin-top: 20px;     
     align-items: left;
     font-size: 20px;
+    
   }
   .main_box--main--login{
     margin-left: 10px;
@@ -33,6 +44,7 @@
     margin-left: 100px;
     border-radius: 7.5px;
     margin-top: 30px;
+    color: rgb(38, 139, 115);
      
 }
 

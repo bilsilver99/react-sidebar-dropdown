@@ -12,7 +12,7 @@ import Header from "./components/Header";
 
 function App() {
   const [authorized, setauthorized] = useState("N");
-  const [username, setusername] = React.useState("(Please Log in)");
+  const [username, setusername] = useState("(Please Log in)");
 
   const authFunction = (childAuthorized, childclientname) => {
     setauthorized(childAuthorized);
@@ -29,8 +29,8 @@ function App() {
   //};
 
   return (
-    <>
-      <Header />
+    <body className="body">
+      <Header signedusername={username} />
       {authorized !== "Y" && <LoginManager authFunction={authFunction} />}
       {authorized === "Y" && (
         <Router>
@@ -48,7 +48,7 @@ function App() {
           </Switch>
         </Router>
       )}
-    </>
+    </body>
   );
 }
 

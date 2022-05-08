@@ -41,7 +41,7 @@ export const login = (username, password) => {
     })
     .then((json) => {
       console.log(json);
-      if (json.user_response.returnguid !== "invalid user") {
+      if (json.user_response.ReturnClientName !== "invalid user") {
         // localStorage.setItem("user", json.user_response.ReturnClientName);
         // localStorage.setItem("clientcode", json.user_response.ReturnClientCode);
         // localStorage.setItem("widget", json.user_response.ReturnWidget);
@@ -55,7 +55,13 @@ export const login = (username, password) => {
         };
       } else {
         //throw new Error("invalid username/password");
-        return { loginmessage: "Invalid username/password" };
+        return {
+          clientname: "Invalid username/password",
+          loginmessage: " ",
+          clientcode: "",
+          authorized: "N",
+          administrator: "",
+        };
       }
     });
 };

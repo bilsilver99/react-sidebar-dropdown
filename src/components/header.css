@@ -1,0 +1,33 @@
+@media screen and (max-width: 700px) {
+  .HeaderBar {   
+    flex-direction: column;
+  }
+}
+.HeaderBar {
+    display: flex;
+    columns: 4;
+    width: 100%;
+    padding: 0.5em 1em;
+    flex-flow: row wrap;
+    flex-basis: auto;
+    gap: 10px;
+    height: 64px;
+    color: black;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+    z-index: 1;
+    font-size: 2rem;
+  }
+  .logo {
+    color: 1abc9c; 
+    flex: 10%;
+}
+.headername{
+  color: 1abc9c; 
+  flex: 50%;
+}
+
+.loginname {
+  flex: 40;
+    color: red; 
+}
+
