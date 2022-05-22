@@ -11,7 +11,11 @@ const Header = (props) => {
         <img src={logo} alt="Iron Reservations " height="60" />
       </div>
       <div className="headername">Iron Reservation Management System</div>
-      {/*<Loginbutton />*/}
+      <Loginbutton
+        username={props.username}
+        authorized={props.authorized}
+        clearLogin={props.clearLogin}
+      />
     </div>
   );
 };

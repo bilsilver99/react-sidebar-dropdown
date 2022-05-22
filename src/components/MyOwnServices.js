@@ -34,8 +34,14 @@ export const login = (username, password) => {
   return fetch(url, requestoptions) // Request fish
     .then((response) => {
       if (!response.ok) {
-        console.log(response);
-        throw new Error("wtf?");
+        return {
+          clientname: "System did not respond",
+          loginmessage: " ",
+          clientcode: "",
+          authorized: "N",
+          administrator: "",
+          unavailable: "Y",
+        };
       }
       return response.json();
     })
@@ -52,6 +58,7 @@ export const login = (username, password) => {
           clientcode: json.user_response.ReturnClientCode,
           authorized: "Y",
           administrator: json.user_response.Returnadministrator,
+          unavailable: "N",
         };
       } else {
         //throw new Error("invalid username/password");
@@ -61,8 +68,20 @@ export const login = (username, password) => {
           clientcode: "",
           authorized: "N",
           administrator: "",
+          unavailable: "N",
         };
       }
+    })
+    .catch((err) => {
+      console.log(err.message);
+      return {
+        clientname: "System Not Available",
+        loginmessage: " ",
+        clientcode: "",
+        authorized: "N",
+        administrator: "",
+        unavailable: "Y",
+      };
     });
 };
 

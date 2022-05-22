@@ -1,5 +1,6 @@
 import React from "react";
-import { login } from "../components/MyOwnServices";
+import { useHistory } from "react-router-dom";
+import { login } from "./MyOwnServices";
 //import styled from "styled-components";
 import "./login.css";
 
@@ -7,11 +8,17 @@ function LoginManager(props) {
   const [authorized, setStatus] = React.useState("N");
   const [username, setusername] = React.useState("");
   const [password, setpassword] = React.useState("");
+  const history = useHistory();
 
   const loginManagerDone = (e) => {
     e.preventDefault();
     login(username, password).then((response) => {
-      props.authFunction(response.authorized, response.clientname);
+      //history.push("/Sidebar");
+      props.authFunction(
+        response.authorized,
+        response.clientname,
+        response.unavailable
+      );
       setStatus(response.authorized);
     });
   };
@@ -27,7 +34,7 @@ function LoginManager(props) {
       {authorized === "N" && (
         <form className="main_box--main" onSubmit={loginManagerDone}>
           <div className="main_box--header">
-            Sign In
+            <h2>Sign In</h2>
             <div className="main_box--main--name">
               Username
               <input
@@ -38,7 +45,7 @@ function LoginManager(props) {
               />
             </div>
             <div className="main_box--main--name">
-              Password
+              Password&nbsp;
               <input
                 className="main_box--main--login"
                 onChange={passwordChangeHandler}

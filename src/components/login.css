@@ -58,7 +58,8 @@
     font-size: 32px;
   }
   .main_box--header h2{
-    color: #fff;
+    padding-left: 250px;
+    color: black;
     font-size: 32px;
   }
   .main_box--header p{
@@ -86,6 +87,6 @@
   }
   .main_box--main--login input,
   .main_box--main--signUp input{
-    margin: 10px 0px ;
+    margin: 0px 0px ;
     box-shadow: 0px 0px 10px rgba(49, 24, 196, 0.25);
   }

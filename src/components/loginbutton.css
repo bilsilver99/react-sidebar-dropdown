@@ -49,7 +49,7 @@
     position: absolute;
     top: 60px;
     right: 0;
-    width: 300px;
+    width: 150px;
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
     opacity: 0;
     visibility: hidden;
@@ -78,4 +78,14 @@
     color: #333333;
     padding: 15px 20px;
     display: block;
+  }
+  .remove_button_css {  
+    color: #4C79D8;  
+    outline: none;
+    padding: 0px;
+    border: 0px;
+    box-sizing: none;
+    background-color: transparent;
+    font-size: 15px;
+    padding-left: 20px;
   }
