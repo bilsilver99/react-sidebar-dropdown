@@ -1,5 +1,5 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+//import { useHistory } from "react-router-dom";
 import { login } from "./MyOwnServices";
 //import styled from "styled-components";
 import "./login.css";
@@ -8,7 +8,7 @@ function LoginManager(props) {
   const [authorized, setStatus] = React.useState("N");
   const [username, setusername] = React.useState("");
   const [password, setpassword] = React.useState("");
-  const history = useHistory();
+  //const history = useHistory();
 
   const loginManagerDone = (e) => {
     e.preventDefault();

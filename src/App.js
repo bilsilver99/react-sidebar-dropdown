@@ -37,6 +37,7 @@ function App() {
         username={username}
         authorized={authorized}
         clearLogin={clearLogin}
+        authFunction={authFunction}
       />
       {unavailable === "Y" && (
         <div className="container">
@@ -47,7 +48,7 @@ function App() {
           </div>
         </div>
       )}
-      {authorized !== "Y" && <LoginManager authFunction={authFunction} />}
+      {authorized !== "Y" && <Welcome />}
       {authorized === "Y" && (
         <Router>
           <Sidebar />
@@ -71,6 +72,8 @@ function App() {
 }
 
 export default App;
+
+//{authorized !== "Y" && <LoginManager authFunction={authFunction} />}
 
 //  <Router>
 // <Sidebar />

@@ -1,10 +1,7 @@
 import React, { useRef } from "react";
 import "./loginbutton.css";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
-//import LoginManager from "./LoginManager";
-
-import { useHistory } from "react-router-dom";
-
+import LoginManager from "./LoginManager";
 /*
  * Read the blog post here:
  * https://letsbuildui.dev/articles/building-a-dropdown-menu-component-with-react-hooks
@@ -15,21 +12,7 @@ export default function Loginbutton(props) {
   //const [isActive, setIsActive] = useState(false);
   const onClick = () => setIsActive(!isActive);
   const showuserdata = () => {};
-  let history = useHistory();
 
-  function handleClick() {
-    history.push("/LoginManager ");
-  }
-
-  // const loginManagerRoutine = (e) => {
-  //   let path = `./LoginManager`;
-  //   let history = useHistory();
-  //   history.push(path);
-  // };
-
-  //    e.preventDefault();
-  //    LoginManager(props.username, props.authorized, props.authfunction);
-  //  };
   return (
     <div className="container">
       <div className="menu-container">
@@ -40,7 +23,9 @@ export default function Loginbutton(props) {
             alt="User avatar"
           />
         </button>
-
+        {props.authorized === "N" && (
+          <LoginManager authFunction={props.authFunction} />
+        )}
         {props.authorized === "Y" && (
           <nav
             ref={dropdownRef}
@@ -66,25 +51,7 @@ export default function Loginbutton(props) {
             </ul>
           </nav>
         )}
-        {props.authorized === "N" && (
-          <nav
-            ref={dropdownRef}
-            className={`menu ${isActive ? "inactive" : "active"}`}
-          >
-            <ul>
-              <li>
-                <button className="remove_button_css" onClick={handleClick}>
-                  Login
-                </button>
-              </li>
-            </ul>
-          </nav>
-        )}
       </div>
     </div>
   );
 }
-
-//{props.authorized === "N" && (
-//  <LoginManager authFunction={props.authFunction} />
-//)}

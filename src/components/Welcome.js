@@ -1,12 +1,14 @@
 import React from "react";
 import "./Welcome.css";
 import system from "../images/system.jpg";
+import scheduling from "../images/scheduling.jpg";
+import globe from "../images/globe.png";
 //import logo from "../images/iron.webp";
 
 function Card() {
   return (
-    <div class="card">
-      <div class="card-top">
+    <div className="card">
+      <div className="card-top">
         <h1>Our System</h1>
       </div>
       <p className="ParagraphSpace">
@@ -27,11 +29,10 @@ function Card() {
 }
 function Card2() {
   return (
-    <div class="card">
-      <div class="card-top">
+    <div className="card">
+      <div className="card-top">
         <h1>Scheduling </h1>
       </div>
-
       <p className="ParagraphSpace">
         We know scheduling and time management can be an arduous process, and
         our system is designed to make the process as simple as possible.
@@ -40,24 +41,42 @@ function Card2() {
         over-ride the schedule for specific requirements, or leave it as is and
         just press the "Launch" button.
       </p>
+      <img
+        className="systempic"
+        src={scheduling}
+        alt="Iron Reservations "
+        height="200"
+        width="200"
+      />
     </div>
   );
 }
 function Card3() {
   return (
-    <div class="card">
-      <div class="card-top">
-        <h1>Support </h1>
+    <div className="card">
+      <div className="card-top">
+        <h1>Scaleability </h1>
       </div>
-
-      <p> something else </p>
+      <p className="ParagraphSpace">
+        Whether you have a small shop with one person and a very simple scheule
+        requirements, or multiple locations scattered all over the world with
+        multiple employees amd rates, our system will handle anything you throw
+        at it with ease.
+      </p>
+      <img
+        className="globepic"
+        src={globe}
+        alt="Iron Reservations "
+        height="200"
+        width="200"
+      />
     </div>
   );
 }
 const Welcome = () => {
   return (
     <div className="App">
-      <div class="right-container">
+      <div className="right-container">
         <Card />
         <Card2 />
         <Card3 />

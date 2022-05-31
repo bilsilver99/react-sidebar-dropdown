@@ -10,11 +10,12 @@ const Header = (props) => {
       <div className="logo">
         <img src={logo} alt="Iron Reservations " height="60" />
       </div>
-      <div className="headername">Iron Reservation Management System</div>
+      <div className="headername">Iron Systems</div>
       <Loginbutton
         username={props.username}
         authorized={props.authorized}
         clearLogin={props.clearLogin}
+        authFunction={props.authFunction}
       />
     </div>
   );
