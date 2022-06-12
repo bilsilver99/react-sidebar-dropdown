@@ -12,7 +12,7 @@ import Welcome from "./components/Welcome";
 //import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  const [authorized, setauthorized] = useState("N");
+  const [authorized, setauthorized] = useState("Y");
   const [username, setusername] = useState("Please Log In");
   const [unavailable, setunavailable] = useState("active");
 
