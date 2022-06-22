@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import "./loginbutton.css";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
 //import LoginManager from "./LoginManager";
-
+import LoginManager from "./LoginManager";
 import { useHistory } from "react-router-dom";
 
 /*
@@ -74,7 +74,7 @@ export default function Loginbutton(props) {
             <ul>
               <li>
                 <button className="remove_button_css" onClick={handleClick}>
-                  Login
+                  <LoginManager />
                 </button>
               </li>
             </ul>
