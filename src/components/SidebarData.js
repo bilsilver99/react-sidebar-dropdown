@@ -6,7 +6,12 @@ import * as RiIcons from "react-icons/ri";
 
 export const SidebarData = [
   {
-    title: "Sheduling",
+    title: "Settings/Profiles",
+    path: "/team",
+    icon: <IoIcons.IoMdPeople />,
+  },
+  {
+    title: "Scheduling",
     path: "/overview",
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -85,11 +90,7 @@ export const SidebarData = [
       },
     ],
   },
-  {
-    title: "Settings",
-    path: "/team",
-    icon: <IoIcons.IoMdPeople />,
-  },
+
   {
     title: "Bookings",
     path: "/messages",

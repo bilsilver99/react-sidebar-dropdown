@@ -63,7 +63,8 @@ export const login = (username, password) => {
       } else {
         //throw new Error("invalid username/password");
         return {
-          clientname: "Invalid username/password",
+          clientname: "",
+          error: "Invalid username/password",
           loginmessage: " ",
           clientcode: "",
           authorized: "N",
@@ -75,7 +76,8 @@ export const login = (username, password) => {
     .catch((err) => {
       console.log(err.message);
       return {
-        clientname: "System Not Available",
+        clientname: "",
+        error: "System Not Available",
         loginmessage: " ",
         clientcode: "",
         authorized: "N",

@@ -2,11 +2,16 @@ import "./App.css";
 import React, { Redirect } from "react";
 import { useState } from "react";
 import Sidebar from "./components/Sidebar";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  element,
+} from "react-router-dom";
 import { Reports, ReportsOne, ReportsTwo, ReportsThree } from "./pages/Reports";
 import { Overview, Scheduling, Users } from "./pages/Overview";
 import Team from "./pages/Team";
-import LoginManager from "./components/LoginManager";
+//import LoginManager from "./components/LoginManager";
 import Header from "./components/Header";
 import Welcome from "./components/Welcome";
 //import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
@@ -48,46 +53,32 @@ function App() {
           </div>
         </div>
       )}
-      {authorized !== "Y" && <Welcome />}
       {authorized === "Y" && (
         <Router>
           <Sidebar />
-          <Switch>
-            <Route path="/" exact component={Welcome} />
-
-            <Route path="/overview" exact component={Overview} />
-            <Route path="/overview" exact component={Users} />
-            <Route path="/overview" exact component={Scheduling} />
-            <Route path="/reports" exact component={Reports} />
-            <Route path="/reports/reports1" exact component={ReportsOne} />
-            <Route path="/reports/reports2" exact component={ReportsTwo} />
-            <Route path="/reports/reports3" exact component={ReportsThree} />
-            <Route path="/team" exact component={Team} />
-            <Route path="/clearLogin" render={(props) => clearLogin()} />
-          </Switch>
         </Router>
       )}
+      <Welcome />
     </div>
   );
 }
 
 export default App;
 
+// {authorized !== "Y" && <Welcome />}
+
 //{authorized !== "Y" && <LoginManager authFunction={authFunction} />}
 
-//  <Router>
-// <Sidebar />
-// <Switch>
-//   <Route path="/overview" exact component={Overview} />
-//   <Route path="/overview" exact component={Users} />
-//   <Route path="/overview" exact component={Scheduling} />
-//   <Route path="/reports" exact component={Reports} />
-//   <Route path="/reports/reports1" exact component={ReportsOne} />
-//   <Route path="/reports/reports2" exact component={ReportsTwo} />
-//   <Route path="/reports/reports3" exact component={ReportsThree} />
-//   <Route path="/team" exact component={Team} />
-// </Switch>
-// </Router>
+// <Route path="/" exact component={Welcome} />
+// <Route path="/overview" exact component={Overview} />
+// <Route path="/overview" exact component={Users} />
+// <Route path="/overview" exact component={Scheduling} />
+// <Route path="/reports" exact component={Reports} />
+// <Route path="/reports/reports1" exact component={ReportsOne} />
+// <Route path="/reports/reports2" exact component={ReportsTwo} />
+// <Route path="/reports/reports3" exact component={ReportsThree} />
+// <Route path="/team" element={Team} />
+// <Route path="/clearLogin" render={(props) => clearLogin()} />
 
 //<Route exact path="/">
 

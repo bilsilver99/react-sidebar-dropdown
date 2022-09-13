@@ -3,7 +3,6 @@ import "./loginbutton.css";
 import { useDetectOutsideClick } from "./useDetectOutsideClick";
 //import LoginManager from "./LoginManager";
 import LoginManager from "./LoginManager";
-import { useHistory } from "react-router-dom";
 
 /*
  * Read the blog post here:
@@ -15,11 +14,10 @@ export default function Loginbutton(props) {
   //const [isActive, setIsActive] = useState(false);
   const onClick = () => setIsActive(!isActive);
   const showuserdata = () => {};
-  let history = useHistory();
 
-  function handleClick() {
-    history.push("/LoginManager ");
-  }
+  // const handleClick = () => {
+  //   history.push("/LoginManager authorized={props.authorized}");
+  // };
 
   // const loginManagerRoutine = (e) => {
   //   let path = `./LoginManager`;
@@ -40,7 +38,6 @@ export default function Loginbutton(props) {
             alt="User avatar"
           />
         </button>
-
         {props.authorized === "Y" && (
           <nav
             ref={dropdownRef}
@@ -73,8 +70,11 @@ export default function Loginbutton(props) {
           >
             <ul>
               <li>
-                <button className="remove_button_css" onClick={handleClick}>
-                  <LoginManager />
+                <button
+                  className="remove_button_css"
+                  onClick={() => <LoginManager />}
+                >
+                  Login
                 </button>
               </li>
             </ul>
@@ -84,7 +84,3 @@ export default function Loginbutton(props) {
     </div>
   );
 }
-
-//{props.authorized === "N" && (
-//  <LoginManager authFunction={props.authFunction} />
-//)}
