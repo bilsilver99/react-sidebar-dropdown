@@ -1,5 +1,5 @@
 import React from "react";
-import "./Welcome.css";
+import "../All.css";
 import system from "../images/system.jpg";
 import scheduling from "../images/scheduling.jpg";
 import globe from "../images/globe.png";

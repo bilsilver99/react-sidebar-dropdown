@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import "./loginbutton.css";
-import { useDetectOutsideClick } from "./useDetectOutsideClick";
-import LoginManager from "./LoginManager";
+import { useDetectOutsideClick } from "../components/useDetectOutsideClick";
+import LoginManager from "../components/LoginManager";
 /*
  * Read the blog post here:
  * https://letsbuildui.dev/articles/building-a-dropdown-menu-component-with-react-hooks

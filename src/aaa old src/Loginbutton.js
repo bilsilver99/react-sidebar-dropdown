@@ -1,8 +1,8 @@
 import React, { useRef } from "react";
 import "./loginbutton.css";
-import { useDetectOutsideClick } from "./useDetectOutsideClick";
+import { useDetectOutsideClick } from "../components/useDetectOutsideClick";
 //import LoginManager from "./LoginManager";
-import LoginManager from "./LoginManager";
+import LoginManager from "../components/LoginManager";
 
 /*
  * Read the blog post here:

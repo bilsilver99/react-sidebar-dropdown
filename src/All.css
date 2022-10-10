@@ -1,0 +1,316 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.home,
+.reports,
+.products,
+.reports {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+.team {
+  display: flex;
+  height: 90vh;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@media screen and (max-width: 700px) {
+  .HeaderBar {
+    flex-direction: column;
+  }
+}
+.HeaderBar {
+  display: flex;
+  columns: 4;
+  width: 100%;
+  padding: 0.5em 1em;
+  flex-flow: row wrap;
+  flex-basis: auto;
+  gap: 10px;
+  height: 80px;
+  color: black;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  font-size: 2rem;
+}
+.logo {
+  color: 1abc9c;
+  flex: 10%;
+}
+.headername {
+  color: 1abc9c;
+  flex: 30%;
+}
+
+.loginname {
+  flex: 40%;
+  color: red;
+}
+
+.main_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  color: black;
+  background-image: url("./images/calendar.jpg");
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 100vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.userError {
+  color: red;
+}
+.main_box--main {
+  width: 600px;
+  height: auto;
+  position: relative;
+  border-radius: 7.5px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.35);
+  background-color: #dfe4e8;
+}
+.main_box--main--name {
+  margin-top: 20px;
+  align-items: left;
+  font-size: 20px;
+}
+.main_box--main--login {
+  margin-left: 10px;
+  padding: 20px;
+  width: 60%;
+  height: 10px;
+  border-radius: 7.5px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.35);
+}
+
+.button {
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.35);
+  width: 60%;
+  height: 40px;
+  margin-left: 100px;
+  border-radius: 7.5px;
+  margin-top: 30px;
+  color: rgb(38, 139, 115);
+}
+
+/* Header */
+.main_box--header {
+  margin-top: 20px;
+  margin-bottom: 35px;
+  width: 700px;
+  padding-left: 10mm;
+  text-align: left;
+  font-size: 32px;
+}
+.main_box--header h2 {
+  padding-left: 250px;
+  color: black;
+  font-size: 32px;
+}
+.main_box--header p {
+  color: #ccc;
+  font-size: 20px;
+}
+
+/* Main */
+
+.main_box--main--title {
+  width: 100%;
+  height: 100px;
+  background: rgb(250, 250, 250);
+  padding: 20px;
+  border-radius: 7.5px 7.5px 0px 0px;
+}
+
+.main_box--main--signUp {
+  padding: 20px;
+  width: 100%;
+  height: 250px;
+  background: rgb(200, 200, 200);
+  box-shadow: inset 0px 5px 5px rgba(0, 0, 0, 0.15);
+  border-radius: 0px 0px 7.5px 7.5px;
+}
+.main_box--main--login input,
+.main_box--main--signUp input {
+  margin: 0px 0px;
+  box-shadow: 0px 0px 10px rgba(49, 24, 196, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-trigger {
+  background: #ffffff;
+  border-radius: 90px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  border: none;
+  vertical-align: middle;
+  transition: box-shadow 0.4s ease;
+  margin-left: auto; /* Strictly for positioning */
+}
+
+.menu-trigger:hover {
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+}
+
+.menu-trigger span {
+  font-weight: 700;
+  vertical-align: middle;
+  font-size: 14px;
+  margin: 0 10px;
+}
+
+.menu-trigger img {
+  border-radius: 90px;
+}
+
+.menu {
+  background: #ffffff;
+  border-radius: 8px;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 150px;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  border-bottom: 1px solid #dddddd;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333333;
+  padding: 15px 20px;
+  display: block;
+}
+.remove_button_css {
+  color: #4c79d8;
+  outline: none;
+  border: 0px;
+  box-sizing: none;
+  background-color: transparent;
+  font-size: 15px;
+  padding-left: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.Welcome_Header {
+  color: 1abc9c;
+  flex: 50%;
+}
+
+.card {
+  height: 600px;
+  margin-top: 10px;
+  width: 350px;
+  float: left;
+  margin-left: 32px;
+  border-radius: 10px;
+}
+.right-container {
+  margin-left: 100px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.card-body {
+  margin-top: 16px;
+  width: 150px;
+  padding-right: 20px;
+  margin-right: 20px;
+  padding-left: 20px;
+}
+.card-top {
+  padding-top: 5px;
+  color: blue;
+  padding-left: 15px;
+}
+.card-body > img {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  animation: rotation 2s infinite linear;
+}
+.ParagraphSpace {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-size: 1.2rem;
+  padding-bottom: 3rem;
+}
+.systempic {
+  padding-left: 30px;
+}
+.globepic {
+  padding-left: 10px;
+}
+/*@keyframes rotation {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(359deg);
+    }
+   }
+   */

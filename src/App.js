@@ -1,16 +1,11 @@
-import "./App.css";
+import "./All.css";
 import React, { Redirect } from "react";
 import { useState } from "react";
 import Sidebar from "./components/Sidebar";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  element,
-} from "react-router-dom";
-import { Reports, ReportsOne, ReportsTwo, ReportsThree } from "./pages/Reports";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Pricing, ReportsOne, ReportsTwo, ReportsThree } from "./pages/Pricing";
 import { Overview, Scheduling, Users } from "./pages/Overview";
-import Team from "./pages/Team";
+import { Team } from "./pages/Team";
 //import LoginManager from "./components/LoginManager";
 import Header from "./components/Header";
 import Welcome from "./components/Welcome";
@@ -56,9 +51,20 @@ function App() {
       {authorized === "Y" && (
         <Router>
           <Sidebar />
+          <Switch>
+            <Route path="/" exact component={Welcome} />
+            <Route path="/team" exact component={Team} />
+            <Route path="/overview" exact component={Overview} />
+            <Route path="/overview" exact component={Users} />
+            <Route path="/overview" exact component={Scheduling} />
+            <Route path="/pricing" exact component={Pricing} />
+            <Route path="/pricing/reports1" exact component={ReportsOne} />
+            <Route path="/pricing/reports2" exact component={ReportsTwo} />
+            <Route path="/pricing/reports3" exact component={ReportsThree} />
+            <Route path="/clearLogin" render={(props) => clearLogin()} />
+          </Switch>
         </Router>
       )}
-      <Welcome />
     </div>
   );
 }

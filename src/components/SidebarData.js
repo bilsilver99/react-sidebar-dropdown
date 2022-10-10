@@ -37,7 +37,7 @@ export const SidebarData = [
   },
   {
     title: "Rates/Pricing",
-    path: "/reports",
+    path: "/pricing",
     icon: <IoIcons.IoIosPaper />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
     iconOpened: <RiIcons.RiArrowUpSFill />,
@@ -45,13 +45,13 @@ export const SidebarData = [
     subNav: [
       {
         title: "Item Descriptions",
-        path: "/reports/reports1",
+        path: "/pricing/reports1",
         icon: <IoIcons.IoIosPaper />,
         cName: "sub-nav",
       },
       {
         title: "Rates",
-        path: "/reports/reports2",
+        path: "/pricing/reports2",
         icon: <IoIcons.IoIosPaper />,
         cName: "sub-nav",
       },

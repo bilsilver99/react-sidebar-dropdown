@@ -1,9 +1,9 @@
 import React from "react";
 
-export const Reports = () => {
+export const Pricing = () => {
   return (
     <div className="reports">
-      <h1>Reportsx</h1>
+      <h1>Pricing</h1>
     </div>
   );
 };
@@ -11,7 +11,7 @@ export const Reports = () => {
 export const ReportsOne = () => {
   return (
     <div className="reports">
-      <h1>Reports/reports1</h1>
+      <h1>Pricing Reports/reports1</h1>
     </div>
   );
 };
@@ -19,7 +19,7 @@ export const ReportsOne = () => {
 export const ReportsTwo = () => {
   return (
     <div className="reports">
-      <h1>Reports/reports2</h1>
+      <h1>Pricing Reports/reports2</h1>
     </div>
   );
 };

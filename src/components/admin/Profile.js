@@ -22,7 +22,7 @@ class Company extends React.Component {
     this.state = {
       success: "",
       CompanyNumber: "",
-      Companyname:"",
+      Companyname: "",
       AddressLineOne: "",
       AddressLineTwo: "",
       AddressLineThree: "",
@@ -79,7 +79,7 @@ class Company extends React.Component {
               <Input
                 defaultValue={this.state.companyname}
                 onChange={this.companynameChangeHandler}
-                className="widthy"
+                className="widthy2"
               />
             </FormGroup>
             <FormGroup>

@@ -2,7 +2,7 @@ import React from "react";
 //import { useNavigate } from "react-router-dom";
 import { login } from "./MyOwnServices";
 //import styled from "styled-components";
-import "./login.css";
+import "../All.css";
 
 function LoginManager(props) {
   const [authorized, setStatus] = React.useState("N");
